@@ -1,5 +1,16 @@
 {
-    "require": {
-        "smarty/smarty": "^4.3"
+  "require": {
+    "smarty/smarty": "^4.3"
+  },
+  "authors": [
+    {
+      "name": "TranHuy",
+      "email": "giahuytran2002@gmail.com"
     }
+  ],
+  "autoload": {
+    "psr-4": {
+      "app\\": "src/"
+    }
+  }
 }
