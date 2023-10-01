@@ -11,7 +11,7 @@ class SmartyTemplate extends Smarty
         parent::__construct();
         $smarty_path = DIR . DS . 'smarty' . DS;
         $this->setTemplateDir($smarty_path . 'templates');
-        $this->setCompileDir($smarty_path . 'templaces_c');
+        $this->setCompileDir($smarty_path . 'templates_c');
         $this->setCacheDir($smarty_path . 'cache');
         $this->setConfigDir($smarty_path . 'config');
     }
