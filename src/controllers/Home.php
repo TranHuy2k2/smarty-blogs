@@ -6,6 +6,8 @@ class Home extends BaseController
 {
     function index()
     {
-        echo 'Home Controller Worked!';
+
+        $this->tpl->assign('header', 'Welcome to Blogs');
+        $this->tpl->display("home/index.tpl");
     }
 }

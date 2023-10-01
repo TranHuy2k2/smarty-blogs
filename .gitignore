@@ -25,3 +25,6 @@ vendor/
 
 # Other
 .env
+src/smarty/templates_c/
+src/smarty/cache/
+```

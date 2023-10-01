@@ -1,5 +1,6 @@
 <?php
 
+use app\config\SmartyTemplate;
 use app\Loader;
 
 ini_set('display_errors', 1);

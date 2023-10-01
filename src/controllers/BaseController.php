@@ -2,14 +2,19 @@
 
 namespace app\controllers;
 
+use app\config\SmartyTemplate;
+
 abstract class BaseController
 {
-    private $url = NULL;
-    private $action = NULL;
+    protected $url = NULL;
+    protected $action = NULL;
+    protected $tpl = NULL;
+
     public function __construct($url, $action)
     {
         $this->url = $url;
         $this->action = $action;
+        $this->tpl = new SmartyTemplate();
     }
     // Calling the action function
     function executeAction()
