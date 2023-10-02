@@ -1,19 +1,31 @@
 let isPlaying = false;
-var lastScrollTop = 0;
 window.addEventListener("scroll", function () {
   if (isPlaying) return;
-  const st = window.pageYOffset || document.documentElement.scrollTop;
-  if (st > lastScrollTop) {
-    $(".side-bar").addClass("animate__bounceInUp");
-  } else {
-    $(".side-bar").addClass("animate__bounceInDown");
-  }
+  $(".side-bar").addClass("animate__wobble");
+
+  $(".navbar").addClass("navbar-light");
+  $(".navbar").addClass("bg-light");
+  $(".navbar").addClass("scroll");
+  $(".navbar").removeClass("navbar-dark");
+
   $(".side-bar").removeClass("animate__bounceIn");
   isPlaying = true;
-  lastScrollTop = st <= 0 ? 0 : st;
   setTimeout(function () {
-    $(".side-bar").removeClass("animate__bounceInDown");
-    $(".side-bar").removeClass("animate__bounceInUp");
+    $(".side-bar").removeClass("animate__wobble");
     isPlaying = false;
-  }, 5000);
+  }, 600);
+  setTimeout(function () {
+    $(".navbar").removeClass("navbar-light");
+    $(".navbar").removeClass("scroll");
+    $(".navbar").removeClass("bg-light");
+    $(".navbar").addClass("navbar-dark");
+  }, 1500);
 });
+
+function delay(ms) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, ms);
+  });
+}
+
+function handleCardEffectOnScroll() {}

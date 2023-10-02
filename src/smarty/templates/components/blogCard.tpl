@@ -1,4 +1,4 @@
-<div class="card animate__slideInRight animate__animated">
+<div class="card animate__animated blog-card d-none">
     <div class="card-body">
         {if $blog->getImage() NE null }
             <div class="blog-image-container">

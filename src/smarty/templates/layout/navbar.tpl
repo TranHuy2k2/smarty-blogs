@@ -1,12 +1,12 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark animate__animated animate__fadeInDown">
+<nav class="navbar navbar-expand-lg navbar-dark animate__animated animate__fadeInDown">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Blogs</a>
+        <a class="navbar-brand" href="?controller=Home">Blogs</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav navbar-nav-scroll">
                 <li class="nav-item">
                     <a class="nav-link {{if $page == 'Home'}} active {{/if}}" aria-current="page"
                         href="?controller=Home">Home</a>
