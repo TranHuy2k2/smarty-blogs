@@ -31,9 +31,11 @@
         {{include file="layout/sidebar.tpl"}}
       </div>
       <div class="col-12 col-sm-12 col-md-7 col-lg-9">
-        {foreach from=$blogs item=blog}
-          {include file="components/blogCard.tpl" blog=$blog}
-        {/foreach}
+        <div class="">
+          {foreach from=$blogs item=blog}
+            {include file="components/blogCard.tpl" blog=$blog}
+          {/foreach}
+        </div>
       </div>
     </div>
   </div>
