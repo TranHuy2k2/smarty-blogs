@@ -1,6 +1,6 @@
 {include file="layout/meta.tpl" }
 <link rel="stylesheet" href="/assets/css/auth.css">
-<script src="/assets/js/register.js"></script>
+<script defer src="/assets/js/register.js"></script>
 </head>
 
 <body>
@@ -15,7 +15,7 @@
                             <img src="/assets/images/zit.jpg" alt="logo">
                         </div>
                     </div>
-                    <form method="post" action="?controller=Auth&action=register">
+                    <form id="registerForm" method="post" action="/?controller=Auth&action=register">
                         <div class="mb-3">
                             <label for="email-input" class="form-label">Email address</label>
                             <input name="email" type="email" class="form-control animate__animated" id="email-input"

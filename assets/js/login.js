@@ -8,12 +8,14 @@ $(document).ready(function () {
   const passwordError = document.getElementById("password-error");
   const header = document.querySelector(".auth-form-header h1");
   header.classList.add("d-none");
+
   setTimeout(() => {
     header.classList.add("animate__fadeInDown");
     header.classList.remove("d-none");
   }, 1000);
 
   submitBtn.addEventListener("click", (e) => {
+    clearError();
     e.preventDefault();
     const email = emailInput.value;
     const password = passwordInput.value;
@@ -55,4 +57,18 @@ function isValidEmail(email) {
 function isValidPassword(password) {
   console.log(password.length);
   return password && password.length >= 8;
+}
+function clearError() {
+  const emailInput = document.getElementById("email-input");
+  const passwordInput = document.getElementById("password-input");
+  emailInput.classList.remove("is-invalid");
+  passwordInput.classList.remove("is-invalid");
+  emailInput.classList.remove("animate__shakeX");
+  passwordInput.classList.remove("animate__shakeX");
+  const emailError = document.getElementById("email-error");
+  const passwordError = document.getElementById("password-error");
+  const emailHelp = document.getElementById("emailHelp");
+  emailError.innerHTML = "";
+  passwordError.innerHTML = "";
+  emailHelp.classList.remove("d-none");
 }

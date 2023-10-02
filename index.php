@@ -1,6 +1,7 @@
 <?php
 
 use app\classes\Database;
+use app\classes\JWTUtil;
 use app\config\SmartyTemplate;
 use app\Loader;
 use Dotenv\Dotenv;
@@ -23,6 +24,11 @@ if (!empty($_GET)) {
     if (in_array($_GET['controller'], $app_controllers)) {
         $controller = new Loader($_GET);
         $controller = $controller->createController();
+        // JWT Middleware
+        if (isset($_COOKIE['jwt'])) {
+            $user = JWTUtil::getPayload($_COOKIE['jwt']);
+            $controller->tpl->assign('user', $user);
+        }
         $controller->executeAction();
     }
 }

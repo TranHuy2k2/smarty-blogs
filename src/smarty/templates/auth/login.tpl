@@ -1,6 +1,6 @@
 {include file="layout/meta.tpl" }
 <link rel="stylesheet" href="/assets/css/auth.css">
-<script src="/assets/js/login.js"></script>
+<script defer src="/assets/js/login.js"></script>
 </head>
 
 <body>
