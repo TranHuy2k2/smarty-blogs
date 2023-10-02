@@ -1,0 +1,39 @@
+.image-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+.image-container img {
+  border-radius: 32px;
+  width: 100%;
+}
+.logo-container {
+  width: 180px;
+  height: 180px;
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 20%;
+  left: 20%;
+}
+.logo-top {
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .logo-container {
+    display: none;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .logo-container {
+    width: 100px;
+    height: 100px;
+  }
+}

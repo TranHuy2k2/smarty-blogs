@@ -22,12 +22,12 @@ $(document).ready(function () {
   }, 1000);
 
   submitBtn.addEventListener("click", (e) => {
+    clearError();
     e.preventDefault();
     const email = emailInput.value;
     const password = passwordInput.value;
     const name = nameInput.value;
     const rePassword = rePasswordInput.value;
-    console.log(email, password, name, rePassword);
     isError = false;
     // Validate email regexp
     if (!isValidEmail(email)) {
@@ -89,4 +89,31 @@ function isValidPassword(password) {
 }
 function isValidRePassword(password, rePassword) {
   return password === rePassword;
+}
+
+function clearError() {
+  const emailInput = document.getElementById("email-input");
+  const passwordInput = document.getElementById("password-input");
+  emailInput.classList.remove("is-invalid");
+  passwordInput.classList.remove("is-invalid");
+  emailInput.classList.remove("animate__shakeX");
+  passwordInput.classList.remove("animate__shakeX");
+  const emailError = document.getElementById("email-error");
+  const passwordError = document.getElementById("password-error");
+  const emailHelp = document.getElementById("emailHelp");
+  emailError.innerHTML = "";
+  passwordError.innerHTML = "";
+  emailHelp.classList.remove("d-none");
+
+  const nameInput = document.getElementById("name-input");
+  const nameError = document.getElementById("name-error");
+  nameInput.classList.remove("is-invalid");
+  nameInput.classList.remove("animate__shakeX");
+  nameError.innerHTML = "";
+
+  const rePasswordInput = document.getElementById("re-password-input");
+  const rePasswordError = document.getElementById("re-password-error");
+  rePasswordInput.classList.remove("is-invalid");
+  rePasswordInput.classList.remove("animate__shakeX");
+  rePasswordError.innerHTML = "";
 }
