@@ -1,6 +1,6 @@
 $(document).ready(function () {
   const submitBtn = document.getElementById("submitBtn");
-  const form = document.getElementById("loginForm");
+  const form = document.getElementById("registerForm");
   const emailInput = document.getElementById("email-input");
   const emailError = document.getElementById("email-error");
   const emailHelp = document.getElementById("emailHelp");
@@ -84,7 +84,6 @@ function isValidEmail(email) {
 }
 
 function isValidPassword(password) {
-  console.log(password.length);
   return password && password.length >= 8;
 }
 function isValidRePassword(password, rePassword) {

@@ -25,6 +25,9 @@
   position: absolute;
   border-radius: 50%;
 }
+.is-invalid.CodeMirror {
+  border: 1px solid red;
+}
 
 @media screen and (max-width: 768px) {
   .logo-container {

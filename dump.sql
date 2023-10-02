@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Oct 02, 2023 at 12:58 PM
+-- Generation Time: Oct 02, 2023 at 02:15 PM
 -- Server version: 8.1.0
 -- PHP Version: 8.2.10
 
@@ -31,6 +31,7 @@ CREATE TABLE `blogs` (
   `id` int NOT NULL,
   `title` text NOT NULL,
   `content` text NOT NULL,
+  `image` text NOT NULL,
   `author_id` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 

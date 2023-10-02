@@ -2,7 +2,7 @@
     <div class="card-body">
         <h5 class="card-title text-center fst-italic">Welcome, Tran Huy</h5>
         <div class="d-flex justify-content-center">
-            <button class="btn btn-secondary create-blog-btn">Create a blog</button>
+            <a href="?controller=Blog&action=showCreate" class="btn btn-secondary create-blog-btn">Create a blog</a>
         </div>
         <div class="author d-flex justify-content-center flex-wrap">
             <div class="image-container w-100 mt-3 shadow-lg">

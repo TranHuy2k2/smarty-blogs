@@ -24,4 +24,12 @@ class UserModel extends BaseModel
         $result = $stmt->fetch();
         return $result;
     }
+    public function createUser($email, $name, $password)
+    {
+        $sql = "INSERT INTO users (email, name, password) VALUES (:email, :name, :password)";
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute(array(':email' => $email, ':name' => $name, ':password' => $password));
+        $result = $stmt->rowCount();
+        return $result;
+    }
 }

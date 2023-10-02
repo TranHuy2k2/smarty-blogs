@@ -8,7 +8,7 @@
 <body>
     {{include file="layout/navbar.tpl" page=$page}}
     <div class="container">
-        <div class="row position-relative">
+        <div class="row position-relative animate__animated animate__fadeInDown">
             <div class="col-12 image-container">
                 <img src="/assets/images/banner.png" alt="cover" class="img-fluid">
             </div>
@@ -18,20 +18,26 @@
         </div>
         <div class="row">
             <div class="col-12">
-                <form class="needs-validation" method="post" action="?controller=Blog&action=store">
+                <form id="createBlogForm" class="needs-validation animate__animated animate__zoomIn  animate__fast"
+                    method="post" action="?controller=Blog&action=store">
                     <div class="mt-3">
                         <label for="title-input" class="form-label">Title</label>
-                        <input name="title" type="text" class="form-control" id="title-input">
-                        <div class="invalid-feedback"></div>
+                        <input name="title" type="text" class="form-control animate__animated" id="title-input">
+                        <div id="title-error" class="invalid-feedback"></div>
+                    </div>
+                    <div class="mt-3">
+                        <label for="image-input" class="form-label">Image URL</label>
+                        <input name="image" type="text" class="form-control animate__animated" id="image-input">
+                        <div id="image-error" class="invalid-feedback"></div>
                     </div>
                     <div class="mt-3">
                         <label for="md-editor" class="form-label">Content</label>
                         <textarea name="content" name="content" id="md-editor"></textarea>
-                        <div class="invalid-feedback"></div>
+                        <div id="content-error" class="invalid-feedback"></div>
                     </div>
                     <div class="d-flex justify-content-end">
-                        <button class="btn btn-dark">Create!</button>
-                        <button class="btn btn-danger ms-2">Reset</button>
+                        <button id="submitBtn" class="btn btn-dark">Create</button>
+                        <button id="clearBtn" class="btn btn-secondary ms-2">Clear</button>
                     </div>
                 </form>
             </div>
