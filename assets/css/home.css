@@ -1,0 +1,35 @@
+.create-blog-btn {
+  width: 200px;
+  max-width: 100%;
+}
+.side-bar {
+  transition: all 0.5s ease-in-out;
+  animation-duration: 1s;
+  border-radius: 12px;
+  position: sticky;
+  top: 100px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+.side-bar.animate__wobble {
+  animation-duration: 0.5s;
+}
+.author-icon {
+  font-size: 28px;
+}
+
+.blog-card {
+  animation-duration: 0.5s;
+}
+
+.blog-image-container {
+  padding: 12px;
+  height: 250px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+}
+.blog-image-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+}
