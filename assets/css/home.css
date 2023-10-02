@@ -31,6 +31,7 @@
 .blog-card {
   padding: 12px;
   animation-duration: 0.5s;
+  overflow: hidden;
 }
 
 .blog-image-container {
