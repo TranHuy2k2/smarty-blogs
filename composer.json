@@ -1,6 +1,7 @@
 {
   "name": "tghuy/smarty-blogs",
   "description": "A simple blog using Smarty template engine and PHP MVC",
+  "license": "MIT",
   "require": {
     "smarty/smarty": "^4.3",
     "vlucas/phpdotenv": "^5.5"
