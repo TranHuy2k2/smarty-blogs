@@ -78,4 +78,9 @@ class Auth extends BaseController
         // Redirect to the homepage
         header("Location: /?controller=Home");
     }
+    public function logOut()
+    {
+        setcookie('jwt', '', time() - 3600, '/');
+        header("Location: /?controller=Home");
+    }
 }

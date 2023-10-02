@@ -11,10 +11,16 @@
                     <a class="nav-link {{if $page == 'Home'}} active {{/if}}" aria-current="page"
                         href="?controller=Home">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link {{if $page == 'Auth'}} active {{/if}}" aria-current="page"
-                        href="?controller=Auth&action=showLogin">Login/Register</a>
-                </li>
+                {if !isset($user)}
+                    <li class="nav-item">
+                        <a class="nav-link {{if $page == 'Auth'}} active {{/if}}" aria-current="page"
+                            href="?controller=Auth&action=showLogin">Login/Register</a>
+                    </li>
+                {else}
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="?controller=Auth&action=logOut">Logout</a>
+                    </li>
+                {/if}
         </div>
     </div>
 </nav>

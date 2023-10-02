@@ -1,6 +1,12 @@
 <div class="card p-3  side-bar animate__animated animate__bounceIn">
     <div class="card-body">
-        <h5 class="card-title text-center fst-italic">Welcome, Tran Huy</h5>
+        <h5 class="card-title text-center fst-italic">Welcome,
+            {if isset($user)}
+                {$user["name"]}
+            {else}
+                Guest
+            {/if}
+        </h5>
         <div class="d-flex justify-content-center">
             <a href="?controller=Blog&action=showCreate" class="btn btn-secondary create-blog-btn">Create a blog</a>
         </div>

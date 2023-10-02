@@ -8,7 +8,7 @@ abstract class BaseController
 {
     protected $url = NULL;
     protected $action = NULL;
-    protected $tpl = NULL;
+    public $tpl = NULL;
 
     public function __construct($url, $action)
     {

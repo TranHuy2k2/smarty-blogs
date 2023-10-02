@@ -20,10 +20,7 @@ class Home extends BaseController
         $this->tpl->assign('header', 'Welcome to Blogs');
         $this->tpl->assign('page', 'Home');
         $this->tpl->assign("blogs", array($welcomeBlog, $welcomeBlog, $welcomeBlog, $welcomeBlog));
-        if (isset($_COOKIE['jwt'])) {
-            $user = JWTUtil::getPayload($_COOKIE['jwt']);
-            $this->tpl->assign('user', $user);
-        }
+
         $this->tpl->display("home/index.tpl");
     }
 }
