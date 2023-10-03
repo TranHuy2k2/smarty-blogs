@@ -5,6 +5,8 @@ services:
     ports:
       - 3000:3000
     build: .
+    volumes:
+      - .:/app
     depends_on:
       - db
     networks:
