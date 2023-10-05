@@ -4,6 +4,7 @@ p {
 
 html {
   scroll-behavior: smooth;
+  scroll-snap-type: mandatory;
 }
 
 /* WebKit-based browsers (Chrome, Safari) */

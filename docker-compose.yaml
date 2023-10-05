@@ -9,8 +9,6 @@ services:
       - .:/app
     depends_on:
       - db
-    networks:
-      - app-network
   db:
     image: mysql:latest
     ports:
@@ -20,19 +18,11 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: 123456789
       MYSQL_DATABASE: smarty-blogs
-    networks:
-      - app-network
   phpmyadmin:
     image: phpmyadmin
     ports:
       - 8081:80
     depends_on:
       - db
-    networks:
-      - app-network
     environment:
       PMA_HOST: db
-
-networks:
-  app-network:
-    driver: bridge

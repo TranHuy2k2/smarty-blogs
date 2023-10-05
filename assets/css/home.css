@@ -27,8 +27,11 @@
   margin: 12px;
   cursor: pointer;
 }
+.cards-container {
+}
 
 .blog-card {
+  scroll-snap-align: start;
   padding: 12px;
   animation-duration: 0.5s;
   overflow: hidden;

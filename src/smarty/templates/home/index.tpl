@@ -16,7 +16,7 @@
         {{include file="layout/sidebar.tpl"}}
       </div>
       <div class="col-12 col-sm-12 col-md-7 col-lg-9">
-        <div class="">
+        <div class="cards-container">
           {foreach from=$blogs item=blog}
             {include file="components/blogCard.tpl" blog=$blog}
           {/foreach}
