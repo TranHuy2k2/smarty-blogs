@@ -13,6 +13,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Check secrets
+        run: |
+          echo ${{ secrets.SSH_PASSWORD }}
+
       - name: Deploy to Azure VPS
         run: |
           sshpass -p ${{ secrets.SSH_PASSWORD }} ssh tghuy@40.82.152.192 'cd /home/tghuy/smarty-blogs && git pull origin main && sudo docker-compose up -d'
