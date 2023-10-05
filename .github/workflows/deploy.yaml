@@ -13,9 +13,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Check secrets
+      - name: Check secrets exist
         run: |
-          echo ${{ secrets.SSH_PASSWORD }}
+          if [ -z "${{ secrets.SSH_PASSWORD }}" ]; then
+            echo "SSH_PASSWORD is not set"
+            exit 1
+          fi
 
       - name: Deploy to Azure VPS
         run: |
